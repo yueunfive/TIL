@@ -10,7 +10,6 @@ fatal: refusing to merge unrelated histories
 <br>
 
 ## 원인 
-<hr>
 원격저장소와 로컬의 커밋이력이 다른데 로컬에서 pull/push를 할 경우, git에서는 이를 이질적인 두 프로젝트로 판단하여 병합을 거부한다.
 
 <br>
