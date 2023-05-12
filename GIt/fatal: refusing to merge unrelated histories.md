@@ -25,10 +25,10 @@ fatal: refusing to merge unrelated histories
   especially if it merges an updated upstream into a topic branch
   ...
   ```
-1. i를 누른다 (commit message를 입력하기 위해)
-2. merge에 대한 message를 입력한다.
-3. esc를 누른다.
-4. wq를 입력한다.
-5. enter를 누른다.
+1. i를 누른다 (commit message를 입력하기 위해)  
+2. merge에 대한 message를 입력한다.  
+3. esc를 누른다.  
+4. wq를 입력한다.  
+5. enter를 누른다.  
   
     
