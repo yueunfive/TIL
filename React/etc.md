@@ -2,7 +2,7 @@
 
 ## Install Error(설치 오류)
 
-```jsx
+```
 Installing react, react-dom, and react-scripts with cra-template...
 
 npm ERR! code EACCES
@@ -13,9 +13,8 @@ npm ERR!
 npm ERR! Your cache folder contains root-owned files, due to a bug in
 npm ERR! previous versions of npm which has since been addressed.
 npm ERR! 
-**npm ERR! To permanently fix this problem, please run:
+**npm ERR! To permanently fix this problem, please run: //해결방법
 npm ERR!   sudo chown -R 501:20 "/Users/yueun-oh/.npm"**
-// 여기 해결방법이 나와있다!
 
 npm ERR! A complete log of this run can be found in:
 npm ERR!     /Users/yueun-oh/.npm/_logs/2023-05-16T01_18_01_445Z-debug-0.log
@@ -24,7 +23,7 @@ Aborting installation.
   npm install --no-audit --save --save-exact --loglevel error react react-dom react-scripts cra-template has failed.
 ```
 
-```jsx
+```
 $ sudo chown -R 501:20 "/Users/yueun-oh/.npm
 ..
 password //맥북 비번 입력
@@ -38,7 +37,7 @@ $ npx create-react-app . // 설치('.'은 현재 디텍토리를 의미)
 
 ## Distribute(배포)
 
-```jsx
+```
 $ npm run build
 ..
 // build 폴더 -> index.html

@@ -10,7 +10,7 @@ props(property)란 상위 컴포넌트가 하위 컴포넌트에 값을 전달�
 
 필기 참고 : [https://bellsilver7.tistory.com/267](https://bellsilver7.tistory.com/267) 
 
-```jsx
+```javascript
 function Header(props) { 
   return <header> 
     <h1><a href="">{props.title}</a></h1> // {} 중괄호로 감싸주어야 한다.

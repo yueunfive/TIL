@@ -6,17 +6,17 @@
 ## 방법
 
 1 돌아가려는 지점 찾기
-```
-$git log
-```
+
+    $ git log
+
 2 리셋하기
-```
-$git reset --hard '돌아가려는 지점의 commit id'
-```
+
+    $ git reset --hard '돌아가려는 지점의 commit id'
+
 3 force로 원격저장소 강제 푸쉬
-```
-git push -f origin master
-```
+
+    $ git push -f origin master
+
 <br>
 
 ## 주의사항!

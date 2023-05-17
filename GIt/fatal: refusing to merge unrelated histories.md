@@ -1,12 +1,11 @@
 # Git 오류 ‘fatal: refusing to merge unrelated histories’ 
 
-```jsx
-git pull origin main // pull할 때 발생했음
-...
-- branch          main     -> FETCH_HEAD
-- [new branch]    main     -> origin/main
-fatal: refusing to merge unrelated histories
-``` 
+    git pull origin main // pull할 때 발생했음
+    ...
+    - branch          main     -> FETCH_HEAD
+    - [new branch]    main     -> origin/main
+    fatal: refusing to merge unrelated histories
+ 
 <br>
 
 ## 원인 
@@ -15,11 +14,10 @@ fatal: refusing to merge unrelated histories
 <br>
 
 ## 해결방법  
-  ```jsx
+  ```
   git pull origin 브런치명 --allow-unrelated-histories
   ```
-
-  ```jsx
+  ```
   // 위 명령 실행하면 밑에 이런 식으로 나올거임
   Please enter a commit message to explain why this merge is necessary, 
   especially if it merges an updated upstream into a topic branch

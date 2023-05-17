@@ -8,7 +8,7 @@
 
 ## Header 컨포넌트에 이벤트 부여
 
-```jsx
+```javascript
 function Header(props) {
   return <header> 
     <h1><a href="" onClick={function(event){ // onClick={event=>{
@@ -37,7 +37,7 @@ function App() {
 
 ## Nav - 클릭시 각기 다른 값 출력
 
-```jsx
+```javascript
 function Nav(props) {
   const lis = []
   for(let i=0; i<props.topics.length; i++){
