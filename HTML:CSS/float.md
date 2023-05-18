@@ -26,3 +26,6 @@
 }
 /* float를 쓰고 나면 항상 clear 속성이 필요 */
 ```
+<br>
+
+출처 : https://codingapple.com/course/html-basics/
