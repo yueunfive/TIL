@@ -16,8 +16,10 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-/* overflow : 박스의 폭이나 높이를 초과하는 내부요소를 처리하기 위한 속성
-hidden : 넘치는 내부요소를 자동으로 잘라 없애준다. */
+  /* 
+  overflow : 박스의 폭이나 높이를 초과하는 내부요소를 처리하기 위한 속성
+  hidden : 넘치는 내부요소를 자동으로 잘라 없애준다. 
+  */
 }
 .overlay {
   width: 100%;
@@ -25,8 +27,10 @@ hidden : 넘치는 내부요소를 자동으로 잘라 없애준다. */
   background: rgba(0, 0, 0, 0.5);
   margin-top: 100%;
   transition: all 1s;
-  /* all : 모든 스타일이 변할 때 서서히 변경
-	 1s : 1초에 걸쳐서 서서히 변경 */ 
+  /* 
+  all : 모든 스타일이 변할 때 서서히 변경
+	1s : 1초에 걸쳐서 서서히 변경 
+  */ 
 }
 .overlay-wrap:hover .overlay {    
   margin-top: 50%;

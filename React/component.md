@@ -42,3 +42,6 @@ function App() {
 // 컴포넌트명으로 코드의 취지를 쉽게 알 수 있다.
 // 한 번에 코드 수정이 가능해져 유지보수가 편리하다.
 ```
+<br>
+
+출처 : https://www.youtube.com/playlist?list=PLuHgQVnccGMCOGstdDZvH41x0Vtvwyxu7

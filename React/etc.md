@@ -43,3 +43,6 @@ $ npm run build
 // build 폴더 -> index.html
 $ npx serve -s build
 ```
+<br>
+
+출처 : https://www.youtube.com/playlist?list=PLuHgQVnccGMCOGstdDZvH41x0Vtvwyxu7
