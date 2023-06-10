@@ -24,4 +24,27 @@ function App() {
 }
 ```
 
+<br>
+
+## onClick
+
+- 어떤 html을 클릭시 원하는 코드를 실행하는 이벤트 핸들러 (버튼 기능)
+- Click 대문자, {} 중괄호 사용, 중괄호 안에 함수를 넣어야 한다.
+
+```jsx
+function App(){
+
+  function 함수(){
+    console.log(1)
+  }
+  return (
+     <div onClick={함수}>하하하</div>
+  )
+}
+
+// 함수 따로 만드는게 귀찮으면 그 자리에서 바로 만들어도 됨
+<div onClick={ function(){ ~ ~ } }>
+<div onClick={ () => { ~ ~ } }>
+```
+
 출처 : 코딩애플 'React 리액트 기초부터 쇼핑몰 프로젝트까지!'
