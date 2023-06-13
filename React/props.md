@@ -1,57 +1,33 @@
 # props(속성)
 
-props(property)란 상위 컴포넌트가 하위 컴포넌트에 값을 전달할 때 사용하는 속성이다,
+- 부모 컴포넌트의 state를 자식 컴포넌트로 전송할 때 사용
+- step 1 : 부모 안의 자식컴포넌트 사용하는 곳에 가서 <자식컴포넌트 작명={state이름} />
+- step 2. 자식컴포넌트 만드는 function으로 가서 props라는 파라미터 등록 후 props.작명 사용
 
-상위 컴포넌트가 하위 컴포넌트에 값을 전달하기 때문에 단방향 데이터 흐름을 갖는다.
-
-부모 컴포넌트는 수정 가능하지만, 자식 컴포넌트는 읽기만 가능하다.
-
-출처 : [https://life-with-coding.tistory.com/509](https://life-with-coding.tistory.com/509)
-
-필기 참고 : [https://bellsilver7.tistory.com/267](https://bellsilver7.tistory.com/267) 
-
-```javascript
-function Header(props) { 
-  return <header> 
-    <h1><a href="">{props.title}</a></h1> // {} 중괄호로 감싸주어야 한다.
-  </header>
-}
-
-function Nav(props) {
-  const lis = []
-  for(let i=0; i<props.topics.length; i++){
-    let t = props.topics[i]
-    lis.push(<li key={t.id}><a href={'/read/'+t.id}>{t.title}</a></li>)
-  }
-  return <nav>
-    <ol>
-      {lis}  
-    </ol>
-  </nav>
-}
-
-function Article(props) {
-  return <article>
-    <h2>{props.title}</h2> 
-      {props.body}
-    </article>
-}
-
+```jsx
 function App() {
-  const topics = [
-    {id:1, title:'html', body:'html is ...'},
-    {id:2, title:'css', body:'css is ...'},
-    {id:3, title:'javascript', body:'javascript is ...'},
-  ]
+  let [title, setTitle] = useState(["UN village", "Candy", "Bambi"]);
   return (
     <div>
-      <Header title='React'></Header>
-      <Nav topics={topics}></Nav>
-      <Article title='Welcome' body='Hello, React!'></Article>
+      <Modal title={title} color={"skyblue"}></Modal>
     </div>
   );
 }
-```
-<br>
 
-출처 : https://www.youtube.com/playlist?list=PLuHgQVnccGMCOGstdDZvH41x0Vtvwyxu7
+function Modal(props) {
+  return (
+    <div className="modal" style={{ background: props.color }}>
+      <h4>{props.title[0]}</h4>
+      <p>날짜</p>
+      <p>상세내용</p>
+    </div>
+  );
+}
+
+// <Modal a={a}  b={b} ... > 무한히 전송 가능
+// state 말고 style 등 이것저것 다 전송할 수 있다.
+// <Modal 글제목={변수명}> 일반 변수, 함수 전송도 가능
+// <Modal color="skyblue"> 일반 문자전송은 중괄호 없이 따옴표만 해도 된다.
+// 자식 → 부모 방향 전송은 불가능(단방향). 자식이 아닌 다른 컴포넌트로의 전송도 불가능
+// 파라미터 문법를 통해 함수 하나로 다양한 기능을 사용하는 것이 키포인트!
+```
