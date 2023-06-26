@@ -191,4 +191,45 @@ let cart = createSlice({
 </tbody>
 ```
 
+<br>
+
+## 과제 2
+
+: 상세페이지 주문하기 버튼을 누르면 새로운 상품이 state에 추가되는 기능
+
+```jsx
+(DetailPage.js)
+
+<button
+  className="btn btn-danger"
+  onClick={() => {
+    dispatch(addItem({ id: 1, name: "Red Knit", count: 1 }));
+  }}
+>
+  주문하기
+</button>
+
+// data랑 cart 객체 구성 다름
+// cart 구성에 맞는 객체 하나 만들어서 파라미터로 넣어야 됨
+```
+
+```jsx
+let cart = createSlice({
+  name: "cart",
+  initialState: [
+    { id: 0, name: "White and Black", count: 2 },
+    { id: 2, name: "Grey Yordan", count: 1 },
+  ],
+  reducers: {
+    addItem(state, action) {
+      state.push(action.payload);
+    },
+  },
+});
+
+export let { addItem } = cart.actions;
+```
+
+<br>
+
 출처 : 코딩애플 'React 리액트 기초부터 쇼핑몰 프로젝트까지!'
