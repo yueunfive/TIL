@@ -204,3 +204,30 @@ function TabContent({ tab }) {
 ```
 
 출처 : 코딩애플 'React 리액트 기초부터 쇼핑몰 프로젝트까지!'
+
+<br>
+
+# 새로 배운 점
+
+## onClick 함수에서 함수 호출 방식
+
+onClick 프로퍼티에 함수를 할당할 때 함수를 바로 전달해버리면, 그 함수가 렌더링 도중 호출되어 실행된다.
+
+ex) 클릭을 안하고 input 창에 값을 입력하기만 해도 함수가 실행되는 오류 발생
+
+→ 함수 자체를 `onClick` 프로퍼티에 전달하는 것이 아니라, 함수를 호출하기 위한 함수를 전달하는 것이 좋다. (화살표 함수 or 별도 함수 선언 후 호출)
+
+```jsx
+// Nope!
+<button onClick={wordCondition() && handleOnClick()}>
+
+// Yes!
+<button onClick={() => wordCondition() && handleOnClick()}>
+
+// Yes!
+const doubleFunction = () => {
+	wordCondition() && handleOnClick
+}
+..
+<button onClick={doubleFunction}>
+```
